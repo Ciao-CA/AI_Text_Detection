@@ -87,8 +87,8 @@ def eval():
     print(model_path)
     model = load_model(model_path, device)
 
-    # test_df = pd.read_excel('homework/data/UCAS_AISAD_TEXT-test1.xlsx')
-    test_df = pd.read_csv('homework/data/UCAS_AISAD_TEXT-test1.csv')
+    # test_df = pd.read_excel('AI_Text_Detection/data/UCAS_AISAD_TEXT-test1.xlsx')
+    test_df = pd.read_csv('AI_Text_Detection/data/UCAS_AISAD_TEXT-test1.csv')
     test_dataset = TextDataset(test_df, tokenizer, max_len)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
@@ -98,12 +98,12 @@ def eval():
     df = pd.DataFrame({
         'label': predictions
     })
-    df.to_csv('homework/data/result/predictions.csv', index=False)
+    df.to_csv('AI_Text_Detection/data/result/predictions.csv', index=False)
 
     df = pd.DataFrame({
         'label': probabilities
     })
-    df.to_csv('homework/data/result/probabilities.csv', index=False)
+    df.to_csv('AI_Text_Detection/data/result/probabilities.csv', index=False)
 
     # print(f"predictions: {predictions}")
 
@@ -118,7 +118,7 @@ if __name__ == "__main__":
 
     model_name = '/netcache/huggingface/roberta-large'
 
-    model_path = 'homework/winner_model/robert-large_text_classifier'
+    model_path = 'AI_Text_Detection/winner_model/robert-large_text_classifier'
 
     device = torch.device('cuda:0') if torch.cuda.is_available() else torch.device('cpu')
 
