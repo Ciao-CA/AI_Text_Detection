@@ -1,4 +1,5 @@
 # AI_Text_Detection
+
 model: roberta-large
 
 显卡:
@@ -14,11 +15,16 @@ model: roberta-large
 > MEGA: Multilingual Evaluation of Generative AI\
 > id: 2303.12528
 
-'''
-git clone 
-'''
-训练
+### 下载
+
+```
+git clone git@github.com:Ciao-CA/AI_Text_Detection.git
+```
+
+### 训练
+
 > CUDA_VISIBLE_DEVICES='0,5,7,8,9' python homework/train_eval.py
 
-测试
+### 测试
+
 > CUDA_VISIBLE_DEVICES='0,5,7,8,9' python homework/test.py
