@@ -14,7 +14,9 @@ model: roberta-large
 > MEGA: Multilingual Evaluation of Generative AI\
 > id: 2303.12528
 
-
+'''
+git clone 
+'''
 训练
 > CUDA_VISIBLE_DEVICES='0,5,7,8,9' python homework/train_eval.py
 
