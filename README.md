@@ -19,6 +19,10 @@ model: roberta-large
 
 ```
 git clone https://github.com/Ciao-CA/AI_Text_Detection.git
+conda create -n ai-detection python=3.9.18
+conda activate ai-detection
+pip install -r AI_Text_Detection/requirements
+
 ```
 
 ### 训练
