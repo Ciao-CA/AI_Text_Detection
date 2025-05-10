@@ -129,8 +129,8 @@ def train():
     print(model_name)
     print(model_save_path)
     
-    train_data_f = pd.read_csv('AI_Text_Detection/data/MAGA/train.csv')
-    val_data_f = pd.read_csv('AI_Text_Detection/data/MAGA/valid.csv')
+    train_data_f = pd.read_csv('homework/data/MEGA/train.csv')
+    val_data_f = pd.read_csv('homework/data/MEGA/valid.csv')
 
     train_size = int(len(train_data_f))
     val_size  = int(len(val_data_f))
@@ -163,12 +163,22 @@ def train():
         predictions, true_labels = evaluate_model(model, val_loader, device)
         print(classification_report(true_labels, predictions))
         
+def eval():
+    val_data_f = pd.read_csv('homework/data/MEGA/valid.csv')
+    val_dataset = TextDataset(val_data_f, tokenizer, max_len)
+    val_loader = DataLoader(val_dataset, batch_size=batch_size, shuffle=False)
+    model = load_model(eval_model_path, device)
+    predictions, true_labels = evaluate_model(model, val_loader, device)
+    print(classification_report(true_labels, predictions))
+
 
 if __name__ == "__main__":
-    model_name = 'AI_Text_Detection/model/roberta-large'
-    model_save_path = 'AI_Text_Detection/model/robert-large_text_classifier_'
+    model_name = 'homework/model/roberta-large'
+    model_save_path = 'homework/model/robert-large_text_classifier_'
+
+    eval_model_path = 'homework/winner_model/robert-large_text_classifier'
     max_len = 512  # Roberta-large最长514
-    batch_size = 32
+    batch_size = 4096
     epochs = 2
     learning_rate = 2e-6
 
@@ -176,4 +186,5 @@ if __name__ == "__main__":
 
     tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    train()
+    train() # 训练代码
+    eval() # 验证代码
