@@ -18,7 +18,7 @@ model: roberta-large
 ### 下载
 
 ```
-git clone git@github.com:Ciao-CA/AI_Text_Detection.git
+git clone https://github.com/Ciao-CA/AI_Text_Detection.git
 ```
 
 ### 训练
