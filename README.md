@@ -22,8 +22,8 @@ git clone https://github.com/Ciao-CA/AI_Text_Detection.git
 conda create -n ai-detection python=3.9.18
 conda activate ai-detection
 pip install -r AI_Text_Detection/requirements
-unzip model/roberta-large.zip -r roberta-large
-unzip winner_model/robert-large_text_classifier.zip -r robert-large_text_classifier
+unzip AI_Text_Detection/model/roberta-large.zip -d AI_Text_Detection/model/roberta-large
+unzip AI_Text_Detection/winner_model/robert-large_text_classifier.zip -d AI_Text_Detection/winner_model/robert-large_text_classifier
 ```
 
 ### 训练
