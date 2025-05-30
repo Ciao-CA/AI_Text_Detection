@@ -31,8 +31,8 @@ pip install -r AI_Text_Detection/requirements.txt
 
 ### 训练
 
-> CUDA_VISIBLE_DEVICES='0,5,7,8,9' python homework/train_eval.py
+> CUDA_VISIBLE_DEVICES=7 python homework/train_eval.py
 
 ### 测试
 
-> CUDA_VISIBLE_DEVICES='0,5,7,8,9' python homework/test.py
+> CUDA_VISIBLE_DEVICES=7 python homework/test.py
