@@ -16,7 +16,12 @@ model: roberta-large
 > id: 2303.12528
 
 ### 下载
-
+由于我的git lfs没有额度了，所以data、model、winner_model目录就放在百度网盘里面了：
+```
+通过网盘分享的文件：
+链接: https://pan.baidu.com/s/1950Df6ifS-A1p946VOja9w?pwd=9001 提取码: 9001 复制这段内容后打开百度网盘手机App，操作更方便哦 
+--来自百度网盘超级会员v2的分享
+```
 ```
 git clone https://github.com/Ciao-CA/AI_Text_Detection.git
 conda create -n ai-detection python=3.9.18
